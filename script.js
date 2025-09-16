@@ -9,6 +9,12 @@ function updateClock() {
 
   clock.textContent = `${dayName} ${hours}:${minutes}`;
 }
-
+updateClock();
 setInterval(updateClock, 1000); 
 
+const toggleButton = document.getElementById('bg-toggle');
+
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  document.body.classList.toggle('light-mode');
+});
