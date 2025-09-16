@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: rgb(15, 13, 12);
+  font-family: "Fira Sans", sans-serif;
+}
+
+.navbar {
+  background-color: rgb(15, 13, 12);;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.nav-link {
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+.nav-link:hover {
+  background-color: #262626;
+  color: #fff;
+}
+
+.nav-link.active {
+  background-color: rgb(64, 64, 64);
+  font-weight: 500;
+}
+
+.navbar-nav a {
+  border-radius: 8px;
+}
+
+main {
+  margin-top: 18rem;
+}
+
+#about {
+  margin-bottom: 12rem;
+}
+
+.greetings, .about-me{
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.name {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.about-me {
+  margin-bottom: 3rem;
+  line-height: 2.2rem;
+}
+
+.social a{
+  transition: all 0.5s;
+}
+
+.social a:hover{
+  background-color: rgb(48, 48, 48);;
+} 
+
+#tools {
+  margin-bottom: 12rem;
+}
+
+.tech-stack, .projects {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 5rem !important; 
+}
+
+#project .card-body {
+  background-color: rgb(31, 31, 31);
+  color: #fff;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+
+
+
+@media (max-width: 768px) {
+  main {
+    margin-top: 10rem;
+    text-align: center;
+  }
+
+  .navbar-brand {
+    font-size: 1.8rem;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  #about {
+    margin-bottom: 5rem;
+  }
+
+  .greetings, .about-me {
+    font-size: 1.1rem;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .about-me {
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+
+  .social {
+    flex-direction: column;
+    gap: 1.5rem !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social a {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+
+  #tools {
+    margin-bottom: 5rem;
+  }
+
+  .tech-stack, .projects {
+    font-size: 2.2rem;
+    margin-bottom: 2rem !important;
+  }
+
+  .col-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .col-4 img {
+    height: 40px !important;
+  }
+
+  .col-4 p {
+    font-size: 0.9rem;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .card-body {
+    padding: 2rem !important;
+  }
+
+  footer p {
+    text-align: center;
+  }
+}
