@@ -37,7 +37,7 @@ body {
 }
 
 main {
-  margin-top: 18rem;
+  margin-top: 12rem;
 }
 
 #about {
@@ -71,13 +71,17 @@ main {
   margin-bottom: 12rem;
 }
 
-.tech-stack, .projects {
+#experience {
+  margin-bottom: 12rem !important;
+}
+
+.tech-stack, .projects, .experience {
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 5rem !important; 
 }
 
-#project .card-body {
+#project .card-body, #experience .card-body{
   background-color: rgb(31, 31, 31);
   color: #fff;
 }
@@ -145,7 +149,7 @@ main {
     margin-bottom: 5rem;
   }
 
-  .tech-stack, .projects {
+  .tech-stack, .experience, .projects {
     font-size: 2.2rem;
     margin-bottom: 2rem !important;
   }
