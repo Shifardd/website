@@ -75,6 +75,10 @@ main {
   margin-bottom: 12rem !important;
 }
 
+#project {
+  margin-bottom: 6rem !important;
+}
+
 .tech-stack, .projects, .experience {
   font-weight: 700;
   font-size: 2.5rem;
@@ -97,7 +101,9 @@ main {
   margin-bottom: 1rem;
 }
 
-
+footer {
+  padding: 3rem 0;
+}
 
 
 @media (max-width: 768px) {
