@@ -1,192 +1,282 @@
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
+#loading {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+z-index: 10000;
+font-size: 24px;
+opacity: 1;
+transition: opacity 0.5s;
+}
+
+#loading p {
+color: #fefefe;
+font-size: 28px;
+font-weight: bold;
+text-shadow: 0 0 8px rgba(255,255,255,0.8);
+margin: 10px 0;
+}
+
+#content {
+display: none;
+}
+
+canvas {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+pointer-events: none;
+z-index: -1; /* Changed from 9999 to -1 so it stays behind content */
+}
 
 body {
-  background-color: rgb(15, 13, 12);
-  font-family: "Fira Sans", sans-serif;
+background-color: rgb(15, 13, 12);
+font-family: "Fira Sans", sans-serif !important;
+position: relative;
 }
 
 .navbar {
-  background-color: rgb(15, 13, 12);;
+background-color: rgb(15, 13, 12);
+height: 80px; /* Fixed navbar height */
 }
 
 .navbar-brand {
-  font-weight: 700;
-  font-size: 2rem;
+font-weight: 700;
+font-size: 2rem;
+color: #80C080;
 }
 
 .nav-link {
-  font-weight: 300;
-  font-size: 1.3rem;
+font-weight: 300;
+font-size: 1.3rem;
+transition: all 0.3s !important;
+opacity: 0.6;
+color: #80C080 !important; 
 }
 
 .nav-link:hover {
-  background-color: #262626;
-  color: #fff;
+background-color: #309030;
+opacity: 0.8;
+color: #262626 !important;
 }
 
 .nav-link.active {
-  background-color: rgb(64, 64, 64);
-  font-weight: 500;
+background-color: #60B060 !important; 
+color: #262626 !important;
+font-weight: 500;
+opacity: 1;
 }
 
 .navbar-nav a {
-  border-radius: 8px;
+border-radius: 8px;
+}
+
+/* Add padding-top to account for fixed navbar */
+.section {
+scroll-margin-top: 100px; /* Offset for fixed navbar */
+min-height: 100vh; /* Ensure sections are tall enough */
+padding-top: 2rem;
 }
 
 main {
-  margin-top: 12rem;
+margin-top: 6rem;
 }
 
 #about {
-  margin-bottom: 12rem;
+margin-bottom: 8rem;
 }
 
 .greetings, .about-me{
-  font-size: 1.5rem;
-  font-weight: 300;
+font-size: 1.5rem;
+font-weight: 300;
 }
 
 .name {
-  font-size: 5rem;
-  font-weight: 600;
+font-size: 5rem;
+font-weight: 600;
+color: #309030;
 }
 
 .about-me {
-  margin-bottom: 3rem;
-  line-height: 2.2rem;
+margin-bottom: 3rem;
+line-height: 2.2rem;
 }
 
 .social a{
-  transition: all 0.5s;
+transition: all 0.8s;
+color: #E0F0E0 !important;
 }
 
 .social a:hover{
-  background-color: rgb(48, 48, 48);;
-} 
+background-color: #309030;
+opacity: 0.95;
+border-radius: 10px;
+font-weight: 700;
+color: #262626 !important;
+}
+
+.social a:hover i {
+color: #262626;
+}
 
 #tools {
-  margin-bottom: 12rem;
+margin-bottom: 8rem;
+color: #80C080;
+}
+
+#tools h3 {
+color: #309030;
 }
 
 #experience {
-  margin-bottom: 12rem !important;
+margin-bottom: 8rem !important;
+color: #309030;
 }
 
 #project {
-  margin-bottom: 6rem !important;
+margin-bottom: 6rem !important;
+color: #309030;
 }
 
 .tech-stack, .projects, .experience {
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 5rem !important; 
+font-weight: 700;
+font-size: 2.5rem;
+margin-bottom: 5rem !important; 
 }
 
 #project .card-body, #experience .card-body{
-  background-color: rgb(31, 31, 31);
-  color: #fff;
+background-color: #161616 !important;
+opacity: 0.9;
+}
+
+#project .card-body a {
+color: #E0F0E0;
+background-color: #006000;
+font-weight: 800;
+transition: all 0.5s;
+}
+
+#project .card-body a:hover {
+background-color: #262626;
+color: #fff;
+}
+
+#experience .card-body .card-title, #project .card-body .card-title {
+color: #80C080;
+}
+
+#experience .card-body .card-text, #project .card-body .card-text {
+color: #fff;
 }
 
 .card-title {
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+font-weight: 700;
+font-size: 2rem;
+margin-bottom: 1rem;
 }
 
 .card-text {
-  line-height: 1.5rem;
-  margin-bottom: 1rem;
+line-height: 1.5rem;
+margin-bottom: 1rem;
 }
 
 footer {
-  padding: 3rem 0;
+padding: 3rem 0;
 }
 
-
 @media (max-width: 768px) {
-  main {
-    margin-top: 10rem;
-    text-align: center;
-  }
+main {
+  margin-top: 8rem;
+  text-align: center;
+}
 
-  .navbar-brand {
-    font-size: 1.8rem;
-  }
+.section {
+  min-height: 80vh;
+  scroll-margin-top: 80px;
+}
 
-  .nav-link {
-    font-size: 1.1rem;
-    text-align: center;
-  }
+.navbar-brand {
+  font-size: 1.8rem;
+}
 
-  #about {
-    margin-bottom: 5rem;
-  }
+.nav-link {
+  font-size: 1.1rem;
+  text-align: center;
+}
 
-  .greetings, .about-me {
-    font-size: 1.1rem;
-  }
+#about {
+  margin-bottom: 4rem;
+}
 
-  .name {
-    font-size: 3rem;
-  }
+.greetings, .about-me {
+  font-size: 1.1rem;
+}
 
-  .about-me {
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-  }
+.name {
+  font-size: 3rem;
+}
 
-  .social {
-    flex-direction: column;
-    gap: 1.5rem !important;
-    align-items: center;
-    justify-content: center;
-  }
+.about-me {
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
 
-  .social a {
-    width: 100%;
-    max-width: 300px;
-    justify-content: center;
-  }
+.social {
+  flex-direction: column;
+  gap: 1.5rem !important;
+  align-items: center;
+  justify-content: center;
+}
 
-  #tools {
-    margin-bottom: 5rem;
-  }
+.social a {
+  width: 100%;
+  max-width: 300px;
+  justify-content: center;
+}
 
-  .tech-stack, .experience, .projects {
-    font-size: 2.2rem;
-    margin-bottom: 2rem !important;
-  }
+#tools {
+  margin-bottom: 4rem;
+}
 
-  .col-4 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
+.tech-stack, .experience, .projects {
+  font-size: 2.2rem;
+  margin-bottom: 2rem !important;
+}
 
-  .col-4 img {
-    height: 40px !important;
-  }
+.col-4 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
 
-  .col-4 p {
-    font-size: 0.9rem;
-  }
+.col-4 img {
+  height: 40px !important;
+}
 
-  .card-title {
-    font-size: 1.6rem;
-  }
+.col-4 p {
+  font-size: 0.9rem;
+}
 
-  .card-text {
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
+.card-title {
+  font-size: 1.6rem;
+}
 
-  .card-body {
-    padding: 2rem !important;
-  }
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
 
-  footer p {
-    text-align: center;
-  }
+.card-body {
+  padding: 2rem !important;
+}
+
+footer p {
+  text-align: center;
+}
 }
