@@ -81,7 +81,7 @@ border-radius: 8px;
 /* Add padding-top to account for fixed navbar */
 .section {
 scroll-margin-top: 100px; /* Offset for fixed navbar */
-min-height: 100vh; /* Ensure sections are tall enough */
+min-height: 60vh; /* Ensure sections are tall enough */
 padding-top: 2rem;
 }
 
@@ -96,6 +96,7 @@ margin-bottom: 8rem;
 .greetings, .about-me{
 font-size: 1.5rem;
 font-weight: 300;
+color: #fff;
 }
 
 .name {
@@ -111,7 +112,7 @@ line-height: 2.2rem;
 
 .social a{
 transition: all 0.8s;
-color: #E0F0E0 !important;
+color: #80C080 !important;
 }
 
 .social a:hover{
@@ -127,22 +128,22 @@ color: #262626;
 }
 
 #tools {
-margin-bottom: 8rem;
+margin-bottom: 6rem;
 color: #80C080;
 }
 
 #tools h3 {
-color: #309030;
+color: #fff;
 }
 
 #experience {
-margin-bottom: 8rem !important;
-color: #309030;
+margin-bottom: 6rem !important;
+color: #fff;
 }
 
 #project {
 margin-bottom: 6rem !important;
-color: #309030;
+color: #fff;
 }
 
 .tech-stack, .projects, .experience {
@@ -188,7 +189,7 @@ margin-bottom: 1rem;
 }
 
 footer {
-padding: 3rem 0;
+padding: 3rem 0 !important;
 }
 
 @media (max-width: 768px) {
