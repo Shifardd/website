@@ -48,6 +48,11 @@ background-color: rgb(15, 13, 12);
 height: 80px; /* Fixed navbar height */
 }
 
+.navbar-nav {
+  background-color: rgb(15, 13, 12);
+
+}
+
 .navbar-brand {
 font-weight: 700;
 font-size: 2rem;
