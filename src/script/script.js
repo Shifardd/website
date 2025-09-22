@@ -95,7 +95,7 @@
     const colors = ["#E0F0E0", "#C0E0C0", "#A0D0A0", "#80C080", "#60B060", "#40A040", "#309030", "#208020", "#107010", "#006000"];
     const followers = [];
     for (let i = 0; i < 10; i++) {
-        followers.push(new Follower(0.1 + i * 0.05, colors[i % colors.length], 20 + i * 5));
+      followers.push(new Follower(0.1 + i * 0.05, colors[i % colors.length], 30 + i * 8));
     }
 
     function loop() {
